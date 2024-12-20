@@ -1,152 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Booking - Grid Layout</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель — Grid Layout</title>
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        background-color: #f4f4f9;
-      }
-      header {
-        background: linear-gradient(45deg, #4caf50, #66bb6a);
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      nav {
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        font-weight: bold;
-        margin: 0 10px;
-        border-radius: 4px;
-        transition: background 0.3s;
-      }
-      nav a:hover {
-        background: #575757;
-      }
-      main {
-        padding: 40px 20px;
-      }
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .grid-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .grid-item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-      }
-      .grid-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .grid-item h3 {
-        margin: 15px 20px 5px;
-      }
-      .grid-item p {
-        margin: 0 20px 20px;
-        color: #666;
-        font-size: 14px;
-      }
-      .grid-item button {
-        display: block;
-        width: calc(100% - 40px);
-        margin: 10px auto 20px;
-        padding: 10px;
-        background: #4caf50;
-        color: white;
-        border: none;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .grid-item button:hover {
-        background: #45a049;
-      }
-      footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 300px;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #3F51B5;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2C3872;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .grid-item h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .grid-item p {
+            font-size: 14px;
+            color: #777;
+            padding: 0 15px;
+        }
+
+        footer {
+            background-color: #2C3872;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
-  </head>
-  <body>
-    <header>Hotel Booking - Explore Our Rooms</header>
-    <nav>
-      <a href="index.html">Grid Layout</a>
-      <a href="flex.html">Flexbox Layout</a>
-      <a href="position.html">Positioning</a>
-      <a href="float.html">Float Layout</a>
-    </nav>
-    <main>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/70/fc/cb/mondrian-park-avenue.jpg?w=1200&h=-1&s=1"
-            alt="Luxury Suite"
-          />
-          <h3>Luxury Suite</h3>
-          <p>Spacious and elegant, perfect for a luxury getaway.</p>
-          <button>Book Now</button>
-        </div>
-        <div class="grid-item">
-          <img
-            src="https://imgcap.capturetheatlas.com/wp-content/uploads/2022/11/mandarin-oriental-5-star-hotel-nyc.jpg"
-            alt="Deluxe Room"
-          />
-          <h3>Deluxe Room</h3>
-          <p>Modern amenities and a comfortable setting for your stay.</p>
-          <button>Book Now</button>
-        </div>
-        <div class="grid-item">
-          <img
-            src=" https://vertical-hotel.ru/upload/iblock/c93/c93c5c978d64cec4e50e815561ba8be0.jpg"
-            alt="Standard Room"
-          />
-          <h3>Standard Room</h3>
-          <p>Affordable yet cozy, perfect for budget-conscious travelers.</p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <p>&copy; 2024 Amir.</p>
-        </div>
-  </body>
+</head>
+<body>
+
+<header>
+    <h1>Отель «Вдохновение»</h1>
+    <p>Роскошный отдых с комфортом</p>
+</header>
+
+<nav>
+    <a href="index.html">GRID</a>
+    <a href="flex.html">Flex</a>
+    <a href="float.html">Float</a>
+    <a href="position.html">Position</a>
+</nav>
+
+<h2 style="text-align:center; padding: 30px 0;">Наши Номера и Услуги</h2>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaZA3ffPoXz9AMtHclN3E_zMQvea-RpoHvzA&s" alt="Стандартный номер">
+        <h3>Стандартный номер</h3>
+        <p>Одноместный номер с ванной, Wi-Fi и телевизором.</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://miracleon.ru/upload/foto/epowvrn48rl2d36d6pftu661su522mm7.jpeg" alt="Люкс">
+        <h3>Люкс</h3>
+        <p>Просторный номер с видом на море, джакузи и мини-баром.</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.atorus.ru/sites/default/files/styles/head_carousel/public/2022-07/637338778407668487.jpg.webp?itok=xnL4y9Xm" alt="Семейный номер">
+        <h3>Семейный номер</h3>
+        <p>Двухкомнатный номер для семей с детьми. С балконом и кухней.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Отель «Вдохновение». Все права защищены.</p>
+</footer>
+
+</body>
 </html>

@@ -1,93 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking - Positioning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Отель — Position Layout</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
+
         header {
-            background: linear-gradient(45deg, #FF5722, #FF7043);
+            background-color: #3F51B5;
             color: white;
-            padding: 20px 0;
+            padding: 15px;
             text-align: center;
-            font-size: 26px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
+            background-color: #2C3872;
+            padding: 10px;
+            text-align: center;
         }
+
         nav a {
             color: white;
+            margin: 0 15px;
             text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            margin: 0 10px;
-            border-radius: 4px;
-            transition: background 0.3s;
+            font-size: 16px;
         }
+
         nav a:hover {
-            background: #575757;
+            text-decoration: underline;
         }
-        .content {
+
+        .container {
             position: relative;
-            margin: 40px auto;
-            max-width: 600px;
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            background-color: #FFEB3B;
+            margin: 30px;
         }
-        .special-offer {
+
+        .box {
             position: absolute;
-            top: -20px;
-            left: 20px;
-            background: #FF5722;
+            width: 250px;
+            height: 250px;
+            background-color: #673AB7;
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
             text-align: center;
-            margin-top: 550px;
+            padding-top: 90px;
+            border-radius: 10px;
+        }
+
+        .box1 { top: 50px; left: 50px; }
+        .box2 { top: 50px; right: 50px; }
+        .box3 { bottom: 50px; left: 50px; }
+        .box4 { bottom: 50px; right: 50px; }
+
+        footer {
+            background-color: #2C3872;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <header>
-        Hotel Booking - Positioning
-    </header>
-    <nav>
-        <a href="index.html">Grid Layout</a>
-        <a href="flex.html">Flexbox Layout</a>
-        <a href="position.html">Positioning</a>
-        <a href="float.html">Float Layout</a>
-    </nav>
-    <main>
-        <div class="content">
-            <div class="special-offer">Special Offer!</div>
-            <h3>Book Now and Save 20%</h3>
-            <p>Our luxurious rooms are available at a discounted price. Don't miss this exclusive deal!</p>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-          <div class="footer-left">
-            <p>&copy; 2024 Amir.</p>
-          </div>
+
+<header>
+    <h1>Отель «Вдохновение»</h1>
+    <p>Позиционированные номера для вашего комфорта</p>
+</header>
+
+<nav>
+    <a href="index.html">GRID</a>
+    <a href="flex.html">Flex</a>
+    <a href="float.html">Float</a>
+    <a href="position.html">Position</a>
+</nav>
+
+
+<h2 style="text-align:center; padding: 30px 0;">Позиции Номеров Отеля</h2>
+
+<div class="container">
+    <div class="box box1">
+        <h3>Стандарт</h3>
+        <p>Номер с одной кроватью и минимальными удобствами.</p>
+    </div>
+    <div class="box box2">
+        <h3>Люкс</h3>
+        <p>Просторный номер с джакузи и видом на море.</p>
+    </div>
+    <div class="box box3">
+        <h3>Семейный</h3>
+        <p>Номер для всей семьи с кухней и балконом.</p>
+    </div>
+    <div class="box box4">
+        <h3>Пентхаус</h3>
+        <p>Роскошный номер на последнем этаже с панорамным видом.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Отель «Вдохновение». Все права защищены.</p>
+</footer>
+
 </body>
 </html>

@@ -1,96 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Booking - Float Layout</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель — Float Layout</title>
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        background-color: #f4f4f9;
-      }
-      header {
-        background: linear-gradient(45deg, #673ab7, #9575cd);
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      nav {
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        font-weight: bold;
-        margin: 0 10px;
-        border-radius: 4px;
-        transition: background 0.3s;
-      }
-      nav a:hover {
-        background: #575757;
-      }
-      .content {
-        overflow: hidden;
-        margin: 40px auto;
-        max-width: 1200px;
-      }
-      .content img {
-        float: left;
-        margin-right: 20px;
-        width: 40%;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-      .content p {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 380px;
-      }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3F51B5;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2C3872;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            overflow: auto;
+            padding: 30px;
+        }
+
+        .float-item {
+            float: left;
+            width: 30%;
+            margin-right: 20px;
+            background-color: #FF5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .float-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .float-item:last-child {
+            margin-right: 0;
+        }
+
+        .float-item h3 {
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #2C3872;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
-  </head>
-  <body>
-    <header>Hotel Booking - Float Layout</header>
-    <nav>
-      <a href="index.html">Grid Layout</a>
-      <a href="flex.html">Flexbox Layout</a>
-      <a href="position.html">Positioning</a>
-      <a href="float.html">Float Layout</a>
-    </nav>
-    <main>
-      <div class="content">
-        <img
-          src="https://res.cloudinary.com/lastminute/image/upload/c_limit,h_999999,w_1920/f_auto/q_auto:eco/q_auto/v1705400401/01_acan1t.jpg"
-          alt="Hotel Room"
-        />
-        <p>
-          Experience comfort and luxury at its best. Our rooms are designed to
-          make you feel at home. Enjoy amenities like free Wi-Fi, flat-screen
-          TVs, and more. Book today and get a special discount!
-        </p>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <p>&copy; 2024 Amir.</p>
-        </div>
-  </body>
+</head>
+<body>
+
+<header>
+    <h1>Отель «Вдохновение»</h1>
+    <p>Услуги для вашего комфорта</p>
+</header>
+
+<nav>
+  <a href="index.html">GRID</a>
+  <a href="flex.html">Flex</a>
+  <a href="float.html">Float</a>
+  <a href="position.html">Position</a>
+</nav>
+
+<h2 style="text-align:center; padding: 30px 0;">Услуги отеля</h2>
+
+<div class="container">
+    <div class="float-item">
+        <img src="https://gthotel.ru/upload/resize_cache/iblock/a9a/985_545_0/ff0u4uxwu0t225b8jb0plr6ren33uj5a.jpg" alt="Завтрак в номере">
+        <h3>Завтрак в номере</h3>
+        <p>Закажите завтрак прямо в номер для комфортного начала дня.</p>
+    </div>
+    <div class="float-item">
+        <img src="https://img.freepik.com/premium-photo/yellow-markings-with-blurred-modern-cars-parked-inside-closed-underground-parking-lot_127089-6521.jpg?semt=ais_hybrid" alt="Парковка">
+        <h3>Парковка</h3>
+        <p>Бесплатная парковка для наших гостей, доступная 24 часа в сутки.</p>
+    </div>
+    <div class="float-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTiMra_zW-PbowHlXu6eprDATkqVeIx0nXAA&s" alt="Трансфер">
+        <h3>Трансфер</h3>
+        <p>Предоставляем услуги трансфера до аэропорта и других ключевых точек города.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Отель «Вдохновение». Все права защищены.</p>
+</footer>
+
+</body>
 </html>

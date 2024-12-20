@@ -1,142 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Booking - Flexbox Layout</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель — Flexbox Layout</title>
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        background-color: #f4f4f9;
-      }
-      header {
-        background: linear-gradient(45deg, #2196f3, #64b5f6);
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      nav {
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        font-weight: bold;
-        margin: 0 10px;
-        border-radius: 4px;
-        transition: background 0.3s;
-      }
-      nav a:hover {
-        background: #575757;
-      }
-      main {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 40px 20px;
-      }
-      .room {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        width: 300px;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .room:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-      }
-      .room img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .room h3 {
-        margin: 15px;
-      }
-      .room p {
-        margin: 0 15px 15px;
-        color: #666;
-        font-size: 14px;
-      }
-      .room button {
-        background: #2196f3;
-        color: white;
-        border: none;
-        padding: 10px;
-        width: calc(100% - 30px);
-        margin: 10px 15px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .room button:hover {
-        background: #1976d2;
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        margin-top: 250px;
-      }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3F51B5;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2C3872;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        
+        .review-item {
+            background-color: #FF5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 1 calc(33% - 30px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+       
+        .review-item:hover {
+            transform: scale(1.05);
+        }
+
+        .review-item img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .review-item h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .review-item p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #2C3872;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
-  </head>
-  <body>
-    <header>Hotel Booking - Flexbox Layout</header>
-    <nav>
-      <a href="index.html">Grid Layout</a>
-      <a href="flex.html">Flexbox Layout</a>
-      <a href="position.html">Positioning</a>
-      <a href="float.html">Float Layout</a>
-    </nav>
-    <main>
-      <div class="room">
-        <img
-          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/81/d9/14/historic-art-deco-lobby.jpg?w=1200&h=-1&s=1"
-          alt="Luxury Suite"
-        />
-        <h3>Luxury Suite</h3>
-        <p>Elegant and spacious room for a luxury stay.</p>
-        <button>Book Now</button>
-      </div>
-      <div class="room">
-        <img
-          src="https://afar.brightspotcdn.com/dims4/default/81c8cf2/2147483647/strip/true/crop/3000x2000+0+0/resize/900x600!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F29%2Fe6%2Fb19432814b778b7588dfa276aa6a%2Fbenjaminhero.jpg"
-          alt="Deluxe Room"
-        />
-        <h3>Deluxe Room</h3>
-        <p>Comfortable and modern, ideal for relaxation.</p>
-        <button>Book Now</button>
-      </div>
-      <div class="room">
-        <img
-          src="https://content.skyscnr.com/available/1323173855/1323173855_WxH.jpg"
-          alt="Standard Room"
-        />
-        <h3>Standard Room</h3>
-        <p>Affordable and cozy, great for budget travelers.</p>
-        <button>Book Now</button>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <p>&copy; 2024 Amir.</p>
-        </div>
-  </body>
+</head>
+<body>
+
+<header>
+    <h1>Отель «Вдохновение»</h1>
+    <p>Отзывы наших довольных гостей</p>
+</header>
+
+<nav>
+  <a href="index.html">GRID</a>
+  <a href="flex.html">Flex</a>
+  <a href="float.html">Float</a>
+  <a href="position.html">Position</a>
+</nav>
+
+<h2 style="text-align:center; padding: 30px 0;">Отзывы наших гостей</h2>
+
+
+<div class="reviews-container">
+    
+    <div class="review-item">
+        
+        <h3>Ирина, Москва</h3>
+        <p>Прекрасное место для отдыха с детьми. Очень понравился семейный номер! Все чисто и уютно. Персонал очень приветливый.</p>
+    </div>
+
+
+    <div class="review-item">
+        
+        <h3>Александр, Санкт-Петербург</h3>
+        <p>Отличный сервис, уютный номер и отличная кухня. Рекомендую всем, кто планирует отдых в этом прекрасном месте!</p>
+    </div>
+
+  
+    <div class="review-item">
+      
+        <h3>Елена, Екатеринбург</h3>
+        <p>Спа-процедуры были просто замечательными, отдых на высшем уровне! Спасибо за отличное обслуживание!</p>
+    </div>
+
+    
+    <div class="review-item">
+        
+        <h3>Виктор, Казань</h3>
+        <p>Отличный бассейн и тренажерный зал, буду возвращаться. Отель на высоте!</p>
+    </div>
+
+    
+    <div class="review-item">
+        
+        <h3>Мария, Новосибирск</h3>
+        <p>Расположение отеля удобно для деловых поездок, в номере всегда чисто и уютно. Я довольна!</p>
+    </div>
+
+    
+    <div class="review-item">
+        
+        <h3>Олег, Нижний Новгород</h3>
+        <p>Отличное обслуживание и дружелюбный персонал! Заслуживает 5 звёзд. Отдых прошел на ура!</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Отель «Вдохновение». Все права защищены.</p>
+</footer>
+
+</body>
 </html>
